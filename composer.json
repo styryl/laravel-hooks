@@ -1,0 +1,35 @@
+{
+    "name": "pikart/laravel-hooks",
+    "description": "Simple hooks system for laravel",
+    "keywords": ["laravel","hooks"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michał Styrylski",
+            "email": "styryl88@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": ">=5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pikart\\LaravelHooks\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "orchestra/testbench": "~3.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pikart\\LaravelHooks\\HookServiceProvider"
+            ],
+            "aliases": {
+                "HookManager": "Pikart\\LaravelHooks\\Facades\\HookManager"
+            }
+        }
+    }
+}
